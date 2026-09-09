@@ -29,7 +29,7 @@ export function Login() {
 
                     <h1> LHSA </h1>
                     
-                    <h2> Bem vindo novamente</h2>
+                    <h2> Bem-vindo novamente</h2>
                 </div>
 
                 {/* Formulário */}
