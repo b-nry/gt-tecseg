@@ -1,9 +1,11 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import { useIsAuthenthicated } from './shared/contexts/AuthContext';
-import { Login } from './pages/Login';
-import { Register } from './pages/Register'
-import { Index } from './pages/Index'
+import { Login } from './pages/Login/Login';
+import { Register } from './pages/Login/Register'
+import { Home } from './pages/Home/Home'
+import { Questionary } from './pages/Questionary/Questionary';
+import { Context } from './pages/Context/Context';
 
 export const AppRoutes = () => {
 
@@ -14,7 +16,10 @@ export const AppRoutes = () => {
         <BrowserRouter>
             {isAuthenthicated && (
                     <Routes>
-                        <Route path='*' element={<Index />} />
+                        <Route path='/home' element={<Home />} />
+                        <Route path='/questionario/:id' element={<Questionary />} />
+                        <Route path='contexto/:id' element={<Context />} />
+                        <Route path='*' element={<Home />} />
                     </Routes>
             )}
             {!isAuthenthicated && (

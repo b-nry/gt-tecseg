@@ -2,9 +2,14 @@
 
 Deixei alguns comentários em alguns códigos para se tiver dúvida, estou fazendo igual o projetinho daquele curso de React que a Bianca mandou (talvez tenha que mudar umas coisas mais pra frente ==> mesmo que tenha pelo menos conseguimos apresentar algum progresso na sexta ^^)
 
-- gpt fez um css bem básico, tinha que conferir no figma os valores exatos
-- não sei se deixamos as páginas de login e cadastro juntas (aperta o botão e muda) ou separado (como está agora) -> acho que separado deixa um ar mais maturo ou realista no código
-- com certeza dá pra componetizar algumas coisas no login e register, até pq eles são IDENTICOS menos uma frase e botão (meu cerebro morreu por hoje)
-- pensei em ter uma página de index e depois ela manda pros formularios e pro contexto
-- agr n sei como fazer os formularios e contexto, só se botar um path pra cada questão e contexto (mas isso vai ficar muito feio, mas maybe its the only waaayyyyyyy)
-- quando mexer em alguma coisa no código bota aqui pra ser nosso cantinho do desabafo
+LOG 2
+
+- versão 2 do protótipo, agora tem todas as páginas solicitadas (pode ser bom fazer uma página de agradecimento no final, parecida com a Home mas com um grande e belo OBRIGADO)
+- não mexi em nada do CSS, só pedi pro GPT fazer parecido com o figma, ele ainda tá todo bugado mas não deve dar tanto trabalho corrigir
+- o questionário e contexto são escaláveis, os dados estão naquele arquivo questions.ts com título da pergunta, opções e contexto (obrigado pela ideia gpt)
+- também falta componetizar as coisas (estou olhando pra vc, menu lateral), mas também deve ser de boa fazer isso
+- por fim é ver se tudo isso tá compatível com o fastapi, mas 0 chances de não precisar alterar nada depois de receber o código do outro grupo
+- enfim a base tá pronta, agora só enfeitar e corrigir
+- não sei se tem uma organização melhor pro projeto (de pastas, etc), se tiver uma ideia pode mexer
+
+\(*-*)/ adiós

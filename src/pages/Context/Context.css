@@ -1,0 +1,121 @@
+.context-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    background-color: #F5F5F5;
+
+    font-family: Arial, sans-serif;
+}
+
+
+.context-content {
+    flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+
+.context-card {
+    width: 450px;
+    min-height: 323px;
+
+    display: flex;
+    flex-direction: column;
+
+    background-color: white;
+
+    border-radius: 10px;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.context-body {
+    flex: 1;
+
+    padding: 20px 23px;
+}
+
+
+.context-body h2 {
+    margin: 0 0 20px;
+
+    text-align: center;
+
+    color: #15152D;
+
+    font-size: 18px;
+}
+
+
+.context-body p {
+    margin: 0 0 12px;
+
+    color: #15152D;
+
+    font-size: 8px;
+
+    line-height: 1.5;
+}
+
+
+.context-source {
+    margin-top: 25px !important;
+
+    color: #666 !important;
+
+    font-size: 6px !important;
+
+    word-break: break-word;
+}
+
+
+.context-footer {
+    height: 57px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 30px;
+
+    border-top: 1px solid #E5E5E5;
+}
+
+
+.back-button,
+.next-button {
+    height: 27px;
+
+    padding: 0 22px;
+
+    border-radius: 9px;
+
+    font-size: 10px;
+
+    cursor: pointer;
+}
+
+
+.back-button {
+    background-color: #0D063B;
+
+    color: white;
+
+    border: 1px solid #15152D;
+}
+
+
+.next-button {
+    background-color: #FFF200;
+
+    color: #15152D;
+
+    border: 2px solid #0D063B;
+}

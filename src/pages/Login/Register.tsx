@@ -1,17 +1,19 @@
 import { useState } from "react"
-import { useAuthContext } from "../shared/contexts/AuthContext";
-import logo from "../assets/logo.png"
+//import { useAuthContext } from "../../shared/contexts/AuthContext";
+import logo from "../../assets/logo.png"
 import "./Login.css"
-import { NavLink } from "react-router";
+import { NavLink, useNavigate } from "react-router";
 
 export function Register() {
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
+    const navigate = useNavigate();
 
-    const { login } = useAuthContext();
+    //const { login } = useAuthContext();
 
-    const handleLogin = () => {
-        login(email, password);
+    const handleLogin = () => { // Cadastrar pessoa no fastapi aqui
+        //login(email, password);
+        navigate('/login');
     };
 
     return (

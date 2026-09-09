@@ -1,6 +1,6 @@
 import { useState } from "react"
-import { useAuthContext } from "../shared/contexts/AuthContext";
-import logo from "../assets/logo.png"
+import { useAuthContext } from "../../shared/contexts/AuthContext";
+import logo from "../../assets/logo.png"
 import "./Login.css"
 import { NavLink } from "react-router";
 
