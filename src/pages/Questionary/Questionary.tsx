@@ -3,6 +3,8 @@ import { useNavigate, useParams } from "react-router-dom";
 
 import { questions } from "../../data/questions";
 
+import { Sidebar } from "../../components/Sidebar/Sidebar";
+
 import "./Questionary.css";
 
 
@@ -50,62 +52,7 @@ export function Questionary() {
 
         <div className="questionary-page">
 
-            <aside className="sidebar">
-
-                <div className="sidebar-logo">
-
-                    <img
-                        src="/src/assets/logo.png"
-                        alt="Logo LHSA"
-                    />
-
-                    <h1>LHSA</h1>
-
-                    <p>
-                        APRENDER.<br />
-                        PROTEGER.<br />
-                        SERVIR.
-                    </p>
-
-                </div>
-
-
-                <nav>
-
-                    <button className="sidebar-button active">
-                        🏠 Início
-                    </button>
-
-                    <button className="sidebar-button">
-                        📋 Formulário
-                    </button>
-
-                </nav>
-
-
-                <div className="sidebar-bottom">
-
-                    <div className="user-info">
-
-                        <div className="user-avatar">
-                            👤
-                        </div>
-
-                        <span>
-                            Usuário<br />
-                            Nome
-                        </span>
-
-                    </div>
-
-                    <button className="logout-button">
-                        ↪ Sair
-                    </button>
-
-                </div>
-
-            </aside>
-
+            <Sidebar />
 
             <main className="questionary-content">
 

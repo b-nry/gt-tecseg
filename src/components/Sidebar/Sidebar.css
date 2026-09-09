@@ -1,0 +1,93 @@
+/* =========================
+   SIDEBAR
+   ========================= */
+
+.sidebar {
+    width: 100px;
+    min-height: 100vh;
+
+    background-color: #0D063B;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 10px 6px;
+}
+
+
+.sidebar-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.sidebar-logo img {
+    width: 75px;
+}
+
+
+.sidebar-logo h1 {
+    margin: 3px 0 5px;
+
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: normal;
+
+    color: #C7AB43;
+}
+
+
+.sidebar-logo p {
+    width: 100%;
+
+    margin: 0;
+
+    font-size: 8px;
+    font-weight: bold;
+
+    line-height: 1.5;
+
+    color: white;
+}
+
+
+.sidebar nav {
+    margin-top: 10px;
+}
+
+
+.sidebar-button {
+    width: 85px;
+    height: 28px;
+
+    margin-bottom: 5px;
+
+    border: none;
+    border-radius: 3px;
+
+    background-color: transparent;
+
+    color: white;
+
+    text-align: left;
+
+    font-size: 9px;
+
+    cursor: pointer;
+}
+
+
+.sidebar-button.active {
+    background-color: #C7AB43;
+    color: #0D063B;
+}
+
+
+.sidebar-bottom {
+    margin-top: auto;
+
+    border-top: 1px solid #27205B;
+
+    padding-top: 8px;
+}
