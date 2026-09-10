@@ -1,9 +1,5 @@
 @import url("https://googleapis.com");
 
-body {
-   font-family: "IBM Plex Sans";
-}
-
 .login-page {
     min-height: 100vh;
     width: 100%;
@@ -175,4 +171,43 @@ body {
 
 .register-link:hover {
     text-decoration: underline;
+}
+
+/*TODO: Mudar a cor para ficar coerente com as cores do LHSA */
+.alert-success {
+    background-color: #0f3822;
+    color: #4ade80;
+    border: 1px solid #166534;
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.alert-success span {
+    background-color: #166534;
+    color: #4ade80;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

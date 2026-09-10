@@ -6,6 +6,7 @@ import { Register } from './pages/Login/Register'
 import { Home } from './pages/Home/Home'
 import { Questionary } from './pages/Questionary/Questionary';
 import { Context } from './pages/Context/Context';
+import { Thanks } from './pages/Thanks/Thanks';
 
 export const AppRoutes = () => {
 
@@ -18,7 +19,8 @@ export const AppRoutes = () => {
                     <Routes>
                         <Route path='/home' element={<Home />} />
                         <Route path='/questionario/:id' element={<Questionary />} />
-                        <Route path='contexto/:id' element={<Context />} />
+                        <Route path='/contexto/:id' element={<Context />} />
+                        <Route path='/agradecimento' element={<Thanks />} />
                         <Route path='*' element={<Home />} />
                     </Routes>
             )}

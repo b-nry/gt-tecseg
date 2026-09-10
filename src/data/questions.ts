@@ -53,5 +53,31 @@ export const questions = [
             source:
                 "Fonte: Material educativo do projeto LHSA."
         }
+    },
+
+    {
+        id: 3,
+
+        question:
+            "Eu tu ele nós vós eles?",
+
+        options: [
+            "Sim",
+            "Não",
+            "Médio",
+            "Laranja",
+            "Batata"
+        ],
+
+        context: {
+            title: "VOCÊ SABIA?",
+
+            paragraphs: [
+                "Hahahaha você caiu na minha armadilha"
+            ],
+
+            source:
+                "Ransomware no seu PC agora :D se divirta"
+        }
     }
 ];

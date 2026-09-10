@@ -1,9 +1,13 @@
 import { useNavigate, useParams } from "react-router-dom";
 
+import { Sidebar } from "../../components/Sidebar/Sidebar";
+import { NavButtons } from "../../components/NavButtons/NavButtons";
+
 import { questions } from "../../data/questions";
 
 import "./Context.css";
 
+// TODO: Pensei em deixar o botão de próxima escrito Finalizar se for a última pergunta
 
 export function Context() {
 
@@ -31,6 +35,9 @@ export function Context() {
         if (nextQuestion) {
             navigate(`/questionario/${nextQuestion.id}`);
         }
+        else {
+            navigate(`/agradecimento`)
+        }
 
     };
 
@@ -39,64 +46,7 @@ export function Context() {
 
         <div className="context-page">
 
-            {/* Sidebar */}
-
-            <aside className="sidebar">
-
-                <div className="sidebar-logo">
-
-                    <img
-                        src="/src/assets/logo.png"
-                        alt="Logo LHSA"
-                    />
-
-                    <h1>LHSA</h1>
-
-                    <p>
-                        APRENDER.<br />
-                        PROTEGER.<br />
-                        SERVIR.
-                    </p>
-
-                </div>
-
-
-                <nav>
-
-                    <button className="sidebar-button active">
-                        🏠 Início
-                    </button>
-
-                    <button className="sidebar-button">
-                        📋 Formulário
-                    </button>
-
-                </nav>
-
-
-                <div className="sidebar-bottom">
-
-                    <div className="user-info">
-
-                        <div className="user-avatar">
-                            👤
-                        </div>
-
-                        <span>
-                            Usuário<br />
-                            Nome
-                        </span>
-
-                    </div>
-
-                    <button className="logout-button">
-                        ↪ Sair
-                    </button>
-
-                </div>
-
-            </aside>
-
+            <Sidebar />
 
             {/* Conteúdo */}
 
@@ -128,27 +78,11 @@ export function Context() {
 
                     </div>
 
-
-                    <div className="context-footer">
-
-                        <button
-                            className="back-button"
-                            onClick={() =>
-                                navigate(`/questionario/${question.id}`)
-                            }
-                        >
-                            Voltar
-                        </button>
-
-
-                        <button
-                            className="next-button"
-                            onClick={handleNext}
-                        >
-                            Próxima
-                        </button>
-
-                    </div>
+                    {/* BOTÕES DE NAVEGAÇÃO */}
+                    <NavButtons 
+                        onReturn={() => navigate(`/questionario/${question.id}`)} 
+                        onAdvance={handleNext}
+                    />
 
                 </div>
 

@@ -1,0 +1,51 @@
+/* =========================
+   RESET
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+
+    min-height: 100%;
+}
+
+
+/* =========================
+   CONFIGURAÇÕES GERAIS
+   ========================= */
+
+body {
+    font-family: "IBM Plex Sans";
+
+    background-color: #F5F5F5;
+
+    color: #15152D;
+}
+
+.lhsa-page {
+    min-height: 100vh;
+
+    display: flex;
+
+    background-color: var(--lhsa-background);
+}
+
+
+/* =========================
+   CORES DO LHSA
+   ========================= */
+
+:root {
+    --lhsa-blue: #03153A;
+    --lhsa-gold: #C7AB43;
+    --lhsa-background: #F5F5F5;
+    --lhsa-white: #FFFFFF;
+    --lhsa-text: #15152D;
+    --lhsa-gray: #888888;
+}

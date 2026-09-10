@@ -3,7 +3,7 @@
 }
 
 
-.home-page {
+.thanks-page {
     min-height: 100vh;
 
     display: flex;
@@ -12,3 +12,4 @@
 
     font-family: Arial, sans-serif;
 }
+

@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import { questions } from "../../data/questions";
 
 import { Sidebar } from "../../components/Sidebar/Sidebar";
+import { NavButtons } from "../../components/NavButtons/NavButtons";
 
 import "./Questionary.css";
 
@@ -102,26 +103,11 @@ export function Questionary() {
 
                     </div>
 
-
-                    <div className="question-footer">
-
-                        <button
-                            className="back-button"
-                            onClick={handleBack}
-                        >
-                            Voltar
-                        </button>
-
-
-                        <button
-                            className="next-button"
-                            onClick={handleNext}
-                            disabled={selectedAnswer === ""}
-                        >
-                            Próxima
-                        </button>
-
-                    </div>
+                    {/* BOTÕES DE NAVEGAÇÃO */}
+                    <NavButtons 
+                        onReturn={handleBack} 
+                        onAdvance={handleNext}
+                    />
 
                 </div>
 

@@ -1,5 +1,7 @@
 import "./Sidebar.css"
 
+// TODO: Permitir receber o nome do usuário para mostrar no final da Sidebar
+
 export function Sidebar() {
     return (
         <aside className="sidebar">

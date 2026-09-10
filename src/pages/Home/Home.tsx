@@ -13,7 +13,7 @@ export function Home() {
     }
 
     return (
-        <div className="questionary-page">
+        <div className="home-page">
 
             < Sidebar />
 
