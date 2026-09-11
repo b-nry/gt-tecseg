@@ -59,7 +59,7 @@ export const questions = [
         id: 3,
 
         question:
-            "Eu tu ele nós vós eles?",
+            "Como que baixa minecraft?",
 
         options: [
             "Sim",
@@ -73,11 +73,11 @@ export const questions = [
             title: "VOCÊ SABIA?",
 
             paragraphs: [
-                "Hahahaha você caiu na minha armadilha"
+                "O sábio sabia que o sabiá não sabia assobiar"
             ],
 
             source:
-                "Ransomware no seu PC agora :D se divirta"
+                "eu"
         }
     }
 ];

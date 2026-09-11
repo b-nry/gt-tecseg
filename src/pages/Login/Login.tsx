@@ -1,8 +1,11 @@
 import { useState } from "react"
+import { NavLink } from "react-router";
+
 import { useAuthContext } from "../../shared/contexts/AuthContext";
+
 import logo from "../../assets/logo.png"
 import "../../styles/global.css"
-import { NavLink } from "react-router";
+
 
 export function Login() {
     const [email, setEmail] = useState<string>('');
@@ -10,7 +13,14 @@ export function Login() {
 
     const { login } = useAuthContext();
 
-    const handleLogin = () => {
+    // TODO: Função provisória para linkar com FastAPI
+    const handleLogin = async () => {
+
+        try {
+            // await api.get('/register', {email, password });
+        } catch (error) {
+            console.error("Erro ao obter informações de usuário:", error)
+        }
         login(email, password);
     };
 

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 
 import { useIsAuthenthicated } from './shared/contexts/AuthContext';
+
 import { Login } from './pages/Login/Login';
 import { Register } from './pages/Login/Register'
 import { Home } from './pages/Home/Home'
@@ -11,7 +12,7 @@ import { Thanks } from './pages/Thanks/Thanks';
 export const AppRoutes = () => {
 
     // Aqui tem a lógica que só deixa entrar se tiver autenticado
-    const isAuthenthicated = useIsAuthenthicated(); // Obrigatorio prefixo "use" para custom hooks
+    const isAuthenthicated = useIsAuthenthicated();
 
     return (
         <BrowserRouter>

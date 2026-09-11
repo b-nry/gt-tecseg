@@ -4,16 +4,23 @@ Deixei alguns comentários em alguns códigos para se tiver dúvida, estou fazen
 
 LOG 3
 
-- percebi que tem um espacinho branco na página de login, registro e sidebar em todos os lados, deve ser algo do css para corrigir
-- texto preto no registro (culpa do h3)
-- deve ser bom aumentar o tamanho da sidebar, questionário e contexto
 - sobre ter dois arquivos para os componentes, o gpt disse pra usar um tal de css modules, continua sendo dois arquivos mas parece ser o jeito mais profissional de lidar com a situação
-- Fiz um arquivo css global mas tá dando erro quando eu substituo questionary-page e context-page por lhsa-page, o conteúdo desce pra baixo, mesmo eles tendo as mesmas propriedades (???)
 
-('-')/ adiós
+('-')/ adiós pedro-hfw
 
 # ...
 
 Modifiquei o CSS em tudo e adicionei ao global (exceto em componentes). A Sidebar precisa de funcionalidade e retrabalho (está feia ainda). Acredito que não é preciso importar global.css em tudo.
 
 /- b-nry
+
+# ...
+
+- mexi um pouco no css da tela de login e cadastro pra caber melhor na tela (o link pra se cadastrar tava escondido)
+- deixei a sidebar funcionando, só não mexi no estilo dela (pra mim tá bonitinho pro protótipo, depois vê o que vc acha que precisa mudar)
+- tentei organizar um pouquinho os códigos
+- deixei uns comentários onde imagino que será feita a chamada do fastapi
+- botei de volta a caixinha dizendo que o usuário foi criado, acho mais bonito que deixar só o texto (só deve precisar mexer na cor, embora eu ache que o verde não fica tão ruim assim)
+- tá faltando deixar o css da sidebar com aquele módulo igual o do navbuttons
+
+('-')/ adiós pedro-hfw

@@ -1,17 +1,12 @@
 import { useNavigate } from "react-router-dom";
-import "../../styles/global.css"
 
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 
-
+import "../../styles/global.css"
 
 export function Home() {
 
     const navigate = useNavigate();
-
-    const handleNavigation = () => {
-        navigate(`/questionario/1`);
-    }
 
     return (
         <div className="home-page">
@@ -24,17 +19,17 @@ export function Home() {
                 </div>
 
                 <h2> Esse protótipo tem por objetivo auxiliar as entrevistas realizadas pela equipe.</h2>
-                <h2> Agradecemos muito pela atenção para nos ajudar.</h2>
+                <h2> Agradecemos muito pela sua atenção para nos ajudar.</h2>
                 <h3> Por favor, clique no link abaixo para iniciar o questionário.</h3>
 
                 <button
-                onClick={handleNavigation}>Iniciar formulário</button>
+                    onClick={() => navigate(`/questionario/1`)}
+                    >
+                    Iniciar formulário
+                </button>
                 
-
-
             </div>
             
-
         </div>
     );
 }

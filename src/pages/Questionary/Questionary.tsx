@@ -1,10 +1,10 @@
 import { useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-import { questions } from "../../data/questions";
-
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { NavButtons } from "../../components/NavButtons/NavButtons";
+
+import { questions } from "../../data/questions";
 
 import "../../styles/global.css"
 

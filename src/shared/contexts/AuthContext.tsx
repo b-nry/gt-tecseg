@@ -1,5 +1,7 @@
 import { createContext, useCallback, useContext, useMemo, useState } from "react"
 
+// TODO: Mais adaptações para o FastAPI serão necessárias
+
 interface IAuthContextProps {
     email: string | undefined;
     accessToken: string | undefined;
@@ -8,22 +10,34 @@ interface IAuthContextProps {
     logout(): void;
 }
 
-const AuthContext = createContext({} as IAuthContextProps); // Armazena os valores compartilhado na aplicação
+const AuthContext = createContext({} as IAuthContextProps);
 
 export const AuthProvider = ({ children }: React.PropsWithChildren) => {
-    const [accessToken, setAccessToken] = useState<string>(); // Removi o null dos parênteses pois estava reclamando
+    const [accessToken, setAccessToken] = useState<string>();
     const [email, setEmail] = useState<string>();
+
 
     const logout = useCallback(() => {
         setEmail(undefined);
         setAccessToken(undefined);
     }, []);
 
+
     const login = useCallback((email: string, password: string) => {
-        // Chamada ao backend para validação
         setEmail(email);
-        setAccessToken(crypto.randomUUID()); // Talvez mudar isso aqui
+        setAccessToken(crypto.randomUUID());
     }, []);
+
+    // Exemplo de adaptação para FastAPI
+    /*
+    const login = async ( email: string, password: string ) => {
+
+        const response = await api.post("/login", { email, password });
+
+        setEmail(email);
+        setAccessToken(response.data.access_token);
+    };
+    */
 
     const detailedUser = useMemo(() => {
         return `O email é ${email}`
@@ -40,7 +54,7 @@ export const useAuthContext = () => {
     return useContext(AuthContext);
 }
 
-export const useIsAuthenthicated = () => { // Macete para verificar se tem algum accessToken
+export const useIsAuthenthicated = () => {
     const { accessToken } = useAuthContext();
     (accessToken)
     return !!accessToken;

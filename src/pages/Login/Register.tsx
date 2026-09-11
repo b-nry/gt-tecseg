@@ -1,11 +1,8 @@
 import { useState } from "react";
 import { NavLink, useNavigate } from "react-router";
 
-// TODO: Manter ou remover dependendo da implementação do fastAPI
-// import { useAuthContext } from "../../shared/contexts/AuthContext";
 import logo from "../../assets/logo.png";
 
-//import "./Login.css";
 import "../../styles/global.css"
 
 export function Register() {
@@ -16,12 +13,11 @@ export function Register() {
 
     const navigate = useNavigate();
 
-    // Esse async provavelmente é algo para o FastAPI
+    // TODO: Provisoria para linkar com FastAPI
     const handleRegister = async () => {
         setIsLoading(true);
 
         try {
-            // Exemplo da chamada ao FastAPI:
             // await api.post('/register', { email, password });
 
             setShowSuccess(true);
@@ -30,6 +26,7 @@ export function Register() {
             setTimeout(() => {
                 navigate('/login');
             }, 2000);
+            
         } catch (error) {
             console.error("Erro ao cadastrar:", error);
             setIsLoading(false);
@@ -55,7 +52,7 @@ export function Register() {
                     />
                     <h1> LHSA </h1>
                     <h2> Crie sua conta </h2>
-                    <h3> Comece sua jornada de aprendizado em cibersegurança </h3>
+                    <h3> Comece sua jornada de aprendizado em cibersegurança! </h3>
                 </div>
 
                 <div className="login-form">
