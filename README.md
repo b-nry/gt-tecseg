@@ -12,5 +12,8 @@ LOG 3
 
 ('-')/ adiós
 
-Modifiquei o CSS em tudo e adicionei ao global (exceto em componentes). A Sidebar precisa de funcionalidade e retrabalho (está feia ainda).
+# ...
+
+Modifiquei o CSS em tudo e adicionei ao global (exceto em componentes). A Sidebar precisa de funcionalidade e retrabalho (está feia ainda). Acredito que não é preciso importar global.css em tudo.
+
 /- b-nry
