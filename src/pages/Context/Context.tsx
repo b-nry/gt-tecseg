@@ -5,7 +5,7 @@ import { NavButtons } from "../../components/NavButtons/NavButtons";
 
 import { questions } from "../../data/questions";
 
-import "./Context.css";
+import "../../styles/global.css"
 
 // TODO: Pensei em deixar o botão de próxima escrito Finalizar se for a última pergunta
 

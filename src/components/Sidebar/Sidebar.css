@@ -1,115 +1,174 @@
-/* =========================
+/* =========================================================
    SIDEBAR
-   ========================= */
+   ========================================================= */
 
 .sidebar {
-    width: 100px;
-    min-height: 100vh;
-
-    background-color: #03153A;
+    width: 168px;
+    min-width: 168px;
+    height: 100vh;
 
     display: flex;
     flex-direction: column;
 
-    padding: 10px 6px;
+    padding: 14px 11px;
+
+    background-color: #03153A;
+
+    color: #ffffff;
+
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+
+    overflow: hidden;
 }
 
+
+/* =========================================================
+   LOGO
+   ========================================================= */
 
 .sidebar-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    width: 100%;
 }
 
 
 .sidebar-logo img {
-    width: 75px;
+    width: 145px;
+    height: 145px;
+
+    object-fit: contain;
+
+    display: block;
 }
 
 
 .sidebar-logo h1 {
-    margin: 3px 0 5px;
-
-    font-family: Georgia, serif;
-    font-size: 18px;
-    font-weight: normal;
+    margin: 0;
 
     color: #C7AB43;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    font-weight: 400;
+
+    line-height: 1;
 }
 
 
 .sidebar-logo p {
     width: 100%;
 
-    margin: 0;
+    margin: 14px 0 7px;
 
-    font-size: 8px;
-    font-weight: bold;
+    color: #ffffff;
 
-    line-height: 1.5;
+    font-size: 13px;
+    font-weight: 700;
 
-    color: white;
+    line-height: 1.35;
+
+    text-align: left;
 }
 
 
+/* =========================================================
+   NAVEGAÇÃO
+   ========================================================= */
+
 .sidebar nav {
-    margin-top: 10px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 7px;
 }
 
 
 .sidebar-button {
-    width: 85px;
-    height: 28px;
+    width: 100%;
+    height: 43px;
 
-    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+
+    padding: 0 10px;
 
     border: none;
-    border-radius: 3px;
+    border-radius: 6px;
 
     background-color: transparent;
 
-    color: white;
+    color: #ffffff;
+
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
 
     text-align: left;
 
-    font-size: 9px;
-
     cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        color 0.15s ease;
+}
+
+
+.sidebar-button:hover {
+    background-color: rgba(199, 171, 67, 0.75);
 }
 
 
 .sidebar-button.active {
     background-color: #C7AB43;
-    color: #0D063B;
+    color: #ffffff;
 }
 
+
+/* =========================================================
+   PARTE INFERIOR
+   ========================================================= */
 
 .sidebar-bottom {
+    width: 100%;
+
     margin-top: auto;
 
-    border-top: 1px solid #27205B;
+    padding-top: 11px;
 
-    padding-top: 8px;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
 }
 
 
+/* =========================================================
+   USUÁRIO
+   ========================================================= */
+
 .user-info {
+    width: 100%;
+    height: 53px;
+
     display: flex;
     align-items: center;
 
-    gap: 5px;
+    padding: 3px;
 
-    margin-bottom: 10px;
+    border: 1px solid #274777;
+    border-radius: 7px;
 
-    color: white;
-
-    font-size: 7px;
+    background-color: transparent;
 }
 
 
 .user-avatar {
-    width: 28px;
-    height: 28px;
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
 
     display: flex;
     align-items: center;
@@ -117,17 +176,102 @@
 
     border-radius: 50%;
 
-    background-color: #6B2F4A;
+    background-color: #6e4938;
+
+    font-size: 25px;
+
+    overflow: hidden;
 }
 
 
+.user-info span {
+    margin-left: 7px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+    line-height: 1.35;
+}
+
+
+/* =========================================================
+   SAIR
+   ========================================================= */
+
 .logout-button {
+    width: 100%;
+
+    margin-top: 14px;
+
+    padding: 0;
+
     border: none;
-    background: none;
 
-    color: white;
+    background: transparent;
 
-    font-size: 9px;
+    color: #ffffff;
+
+    font-family: "IBM Plex Sans", Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    text-align: left;
 
     cursor: pointer;
+}
+
+
+.logout-button:hover {
+    color: #C7AB43;
+}
+
+
+/* =========================================================
+   RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        width: 100%;
+        min-width: 0;
+        height: auto;
+
+        flex-direction: row;
+        align-items: center;
+
+        padding: 8px 12px;
+    }
+
+    .sidebar-logo {
+        width: auto;
+
+        flex-direction: row;
+    }
+
+    .sidebar-logo img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .sidebar-logo h1,
+    .sidebar-logo p {
+        display: none;
+    }
+
+    .sidebar nav {
+        flex-direction: row;
+
+        width: auto;
+
+        margin-left: auto;
+    }
+
+    .sidebar-button {
+        width: auto;
+    }
+
+    .sidebar-bottom {
+        display: none;
+    }
 }

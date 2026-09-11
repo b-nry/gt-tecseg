@@ -11,3 +11,6 @@ LOG 3
 - Fiz um arquivo css global mas tá dando erro quando eu substituo questionary-page e context-page por lhsa-page, o conteúdo desce pra baixo, mesmo eles tendo as mesmas propriedades (???)
 
 ('-')/ adiós
+
+Modifiquei o CSS em tudo e adicionei ao global (exceto em componentes). A Sidebar precisa de funcionalidade e retrabalho (está feia ainda).
+/- b-nry

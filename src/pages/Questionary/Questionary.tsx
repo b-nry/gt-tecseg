@@ -6,8 +6,7 @@ import { questions } from "../../data/questions";
 import { Sidebar } from "../../components/Sidebar/Sidebar";
 import { NavButtons } from "../../components/NavButtons/NavButtons";
 
-import "./Questionary.css";
-
+import "../../styles/global.css"
 
 export function Questionary() {
 

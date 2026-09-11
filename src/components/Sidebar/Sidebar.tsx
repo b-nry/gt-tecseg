@@ -1,6 +1,7 @@
 import "./Sidebar.css"
 
 // TODO: Permitir receber o nome do usuário para mostrar no final da Sidebar
+// TODO: Toda utilidade da Sidebar
 
 export function Sidebar() {
     return (
@@ -25,7 +26,7 @@ export function Sidebar() {
 
             <nav>
 
-                <button className="sidebar-button active">
+                <button className="sidebar-button">
                     🏠 Início
                 </button>
 

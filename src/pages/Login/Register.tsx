@@ -5,7 +5,8 @@ import { NavLink, useNavigate } from "react-router";
 // import { useAuthContext } from "../../shared/contexts/AuthContext";
 import logo from "../../assets/logo.png";
 
-import "./Login.css";
+//import "./Login.css";
+import "../../styles/global.css"
 
 export function Register() {
     const [email, setEmail] = useState<string>('');
