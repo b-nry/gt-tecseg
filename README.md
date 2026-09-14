@@ -24,3 +24,13 @@ Modifiquei o CSS em tudo e adicionei ao global (exceto em componentes). A Sideba
 - tá faltando deixar o css da sidebar com aquele módulo igual o do navbuttons
 
 ('-')/ adiós pedro-hfw
+
+# ...
+
+- botei todos os campos de cadastro conforme nós combinamos, só não implementei a verificação do tamanho da senha pro registro ou login (precisa de um texto explicando isso na tela ou um (i) que quando passa o mouse fala)
+- falta estilizar o campo do calendário, ele tá quadradão (e ele n usa css igual os outros) e o aviso da senha criada tá numa posição ruim, deve ser interessante fazer ele aparecer sobre tudo na parte superior da tela (tipo sobrepondo as coisas)
+- componetizei o input dos usuários, só não deu o seletor (instituição) e data pq eles só usamos uma vez (será que é bom componetizar mesmo assim)?
+*obs. o calendário é uma opção externa pra ficar bonitão, o do react é tenebroso de feio e não funcional, esse é muito mais adaptável (pelo que eu vi eles deixam usar de boa)
+**obs. deixei os inputs todos descendo, será que é bom deixar eles de lado?
+
+('-')/ adiós pedro-hfw
