@@ -34,3 +34,13 @@ Modifiquei o CSS em tudo e adicionei ao global (exceto em componentes). A Sideba
 **obs. deixei os inputs todos descendo, será que é bom deixar eles de lado?
 
 ('-')/ adiós pedro-hfw
+
+# 16/09
+
+- cadastro completo e botei uma mensagem de aviso se as senhas não forem idênticas ou se o tamanho for maior que 8 caracteres
+- não botei nada para ver se o usuário preencheu todos os campos, como a execução da ferramenta vai ser acompanhada não sei se é necessário fazer isso (se for deixar livre é bom colocar, mas é algo bem simples de se fazer)
+- o campo das datas ainda tem um leve contorno preto quando seleciona ele, isso tá me incomodando
+- amanhã e dpsdamanhã vou tentar implementar as sugestões da Bianca no figma aqui na plataforma para nós testarmos
+- falta só o negócio de analisar a senha, de resto só uns ajustes de organização do código...
+
+('-')/ adiós pedro-hfw

@@ -3,29 +3,53 @@ import { NavLink } from "react-router";
 
 import { useAuthContext } from "../../shared/contexts/AuthContext";
 import { InputField } from "../../components/InputField/InputField";
+import { Alert } from "../../components/Alert/Alert";
 
 import logo from "../../assets/logo.png"
 import "../../styles/global.css"
 
-// TODO: Permitir que usuários façam login pelo nome de usuário também? Não sei como seria
+// TODO: Permitir que usuários façam login pelo nome de usuário também? Não sei como funcionaria...
 
 export function Login() {
+
+    // Dados de Login
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
+    // Auxiliares
     const [isLoading, setIsLoading] = useState<boolean>(false);
-
+    const [alert, setAlert] = useState<{
+        type: "success" | "error" | "warning";
+        message: string;
+    } | null>(null);
     const { login } = useAuthContext();
 
-    // TODO: Função provisória para linkar com FastAPI
+    // Funções
     const handleLogin = async () => {
+
+        if(password.length > 8) {
+            setAlert({
+                type: "error",
+                message: "A senha deve ter no máximo 8 caracteres."
+            });
+            
+            return;
+        }
+
         setIsLoading(true);
 
         try {
             // await api.get('/register', {email, password });
 
         } catch (error) {
+            // TODO: Manter isso ao botar em produção???
             console.error("Erro ao obter informações de usuário:", error)
+
+            setAlert({
+                type: "error",
+                message: "Usuário ou Senha incorretos..."
+            });
+
             setIsLoading(false);
         }
 
@@ -61,7 +85,6 @@ export function Login() {
                         isLoading={false}
                     />
 
-                    {/*TODO: Limitar senha a 8 caracteres */}
                     <InputField
                         label="Senha:"
                         id="password"
@@ -80,9 +103,21 @@ export function Login() {
                     {isLoading ? "Fazendo login..." : "Fazer Login"}
                 </button>
 
-                <NavLink to="/cadastro">
+                <NavLink 
+                    className="login-redirect"
+                    to="/cadastro"
+                    >
                     Cadastre-se aqui
                 </NavLink>
+
+                {alert && (
+                    <Alert
+                        type={alert.type}
+                        message={alert.message}
+                        onClose={() => setAlert(null)}
+                    />
+                )}
+
             </div>
         </div>
     );

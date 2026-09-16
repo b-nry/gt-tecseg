@@ -3,54 +3,86 @@ import { NavLink, useNavigate } from "react-router";
 import { DatePicker } from "@mui/x-date-pickers";
 import dayjs, { Dayjs } from 'dayjs';
 
-import logo from "../../assets/logo.png";
 import { InputField } from "../../components/InputField/InputField";
+import { Alert } from "../../components/Alert/Alert";
 
+import logo from "../../assets/logo.png";
 import "../../styles/global.css"
 
+/* TODO: Limitação de nome de usuário e email únicos deve estar relacionada a verificar
+no banco de dados se já existe um parecido */
 
 export function Register() {
+
+    // Dados Cadastrais
     const [name, setName] = useState<string>('');
     const [institution, setInstitution] = useState<string>('');
     const [birthDate, setBirthDate] = useState<Dayjs | null>(null);
     const [username, setUsername] = useState<string>('');
     const [email, setEmail] = useState<string>('');
-
     const [password, setPassword] = useState<string>('');
     const [passwordConfirmation, setPasswordConfirmation] = useState<string>('');
 
-    const [showSuccess, setShowSuccess] = useState<boolean>(false);
+    // Auxiliares
     const [isLoading, setIsLoading] = useState<boolean>(false);
-
+    const [alert, setAlert] = useState<{
+        type: "success" | "error" | "warning";
+        message: string;
+    } | null>(null);
     const navigate = useNavigate();
 
-
+    // Funções
     const handleRegister = async () => {
 
-        if (password != passwordConfirmation) {
-            // TODO: Retornar aviso de senhas diferentes
+        if(password.length > 8){
+            setAlert({
+                type: "error",
+                message: "A senha deve ter no máximo 8 caracteres."
+            });
+            
             return;
         }
+
+        if (password != passwordConfirmation) {
+            setAlert({
+                type: "error",
+                message: "As senhas não coincidem."
+            });
+
+            return;
+        }
+
         setIsLoading(true);
 
         try {
             // await api.post('/register', { name, institution, birthDate, username, email, password });
 
-            setShowSuccess(true);
+            setAlert({
+                type: "success",
+                message: "Cadastro realizado com sucesso, redirecionando..."
+            });
 
-            // Aguarda 2 segundos para o usuário ler e redireciona
             setTimeout(() => {
                 navigate('/login');
             }, 2000);
 
-        } catch (error) {
+        } 
+        catch (error) {
+            // TODO: Manter isso ao botar em produção???
             console.error("Erro ao cadastrar:", error);
+
+            setAlert({
+                type: "error",
+                message: "Não foi possível realizar o cadastro.."
+            });
+
             setIsLoading(false);
         }
     };
 
     return (
         <div className="login-page">
+
             <div className="login-container">
 
                 <div className="login-header">
@@ -104,9 +136,7 @@ export function Register() {
 
                     <div className="input-group">
 
-                        <label htmlFor="birthDate">
-                            Data de Nascimento:
-                        </label>
+                        <label htmlFor="birthDate"> Data de Nascimento: </label>
 
                         <DatePicker
                             value={birthDate}
@@ -119,19 +149,12 @@ export function Register() {
                                     sx: {
                                         width: '100%',
                                         backgroundColor: 'white',
-
-                                        '& .MuiOutlinedInput-root': {
-                                            borderRadius: '20px',
-                                        },
-
-                                        '& .MuiOutlinedInput-notchedOutline': {
-                                            border: '2px solid #C7AB43',
-                                        },
+                                        borderRadius: '20px',
+                                        border: '2px solid var(--lhsa-gold)'
                                     },
                                 },
                             }}
                         />
-
                     </div>
 
                     <InputField
@@ -152,7 +175,6 @@ export function Register() {
                         isLoading={false}
                     />
 
-                    {/*TODO: Limitar senha a 8 caracteres */}
                     <InputField
                         label="Senha:"
                         id="password"
@@ -161,6 +183,9 @@ export function Register() {
                         onChange={setPassword}
                         isLoading={false}
                     />
+                    <div className="input-tip">
+                        <h3> Atenção: Senha deve ter no máximo 8 caracteres.</h3>
+                    </div>
 
                     <InputField
                         label="Confirmação de Senha:"
@@ -172,12 +197,6 @@ export function Register() {
                     />
                 </div>
 
-                {showSuccess && (
-                    <div className="alert-success">
-                        <span>✓</span> Conta cadastrada com sucesso! Redirecionando...
-                    </div>
-                )}
-
                 <button
                     className="login-button"
                     onClick={handleRegister}
@@ -186,9 +205,20 @@ export function Register() {
                     {isLoading ? "Cadastrando..." : "Cadastrar"}
                 </button>
 
-                <NavLink to="/login">
+                <NavLink 
+                    to="/login"
+                    className="login-redirect"
+                    >
                     Voltar
                 </NavLink>
+
+                {alert && (
+                    <Alert
+                        type={alert.type}
+                        message={alert.message}
+                        onClose={() => setAlert(null)}
+                    />
+                )}
 
             </div>
         </div >
