@@ -61,3 +61,5 @@ b-nry
 - troquei o tom do amarelo conforme a Bianca sugeriu
 - tirei a importação do global para o app, agora só importar uma vez lá :), e botei nome das variáveis no css dos componentes 
 - senha tá oculta agora
+
+('-')/ adiós pedro-hfw
