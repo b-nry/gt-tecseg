@@ -69,7 +69,7 @@
     border: 3px solid #071a3c;
     border-radius: 15px;
 
-    background-color: #ffdc2f;
+    background-color: var(--lhsa-gold);
 
     color: #101010;
 
@@ -88,7 +88,7 @@
 
 
 .next-button:hover {
-    background-color: hsl(50, 100%, 78%);
+    background-color: var(--lhsa-gold-dark);
 }
 
 

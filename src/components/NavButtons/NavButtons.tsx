@@ -5,8 +5,6 @@ interface INavButtons {
     onAdvance(): void;
 }
 
-// TODO: Consertar a questão do disabled
-
 export const NavButtons = ({onReturn, onAdvance}: INavButtons) => {
     
     return (

@@ -7,7 +7,6 @@ import { InputField } from "../../components/InputField/InputField";
 import { Alert } from "../../components/Alert/Alert";
 
 import logo from "../../assets/logo.png";
-import "../../styles/global.css"
 
 /* TODO: Limitação de nome de usuário e email únicos deve estar relacionada a verificar
 no banco de dados se já existe um parecido */
@@ -178,6 +177,7 @@ export function Register() {
                     <InputField
                         label="Senha:"
                         id="password"
+                        type='password'
                         placeholder="Digite sua senha"
                         value={password}
                         onChange={setPassword}
@@ -190,6 +190,7 @@ export function Register() {
                     <InputField
                         label="Confirmação de Senha:"
                         id="passwordConfirmation"
+                        type='password'
                         placeholder="Digite novamente sua senha"
                         value={passwordConfirmation}
                         onChange={setPasswordConfirmation}

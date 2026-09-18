@@ -6,7 +6,6 @@ import { NavButtons } from "../../components/NavButtons/NavButtons";
 
 import { questions } from "../../data/questions";
 
-import "../../styles/global.css"
 
 export function Questionary() {
 
@@ -39,7 +38,7 @@ export function Questionary() {
 
     const handleBack = () => {
 
-        if (question.id != 1){ // deve dar problema se fizer várias perguntas!
+        if (question.id != 1){
             navigate(`/contexto/${Number(id) - 1}`)
         }
         else{

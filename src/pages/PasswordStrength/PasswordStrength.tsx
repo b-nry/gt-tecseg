@@ -1,7 +1,6 @@
 import { useMemo, useState } from 'react'
 import { zxcvbn } from '../../lib/zxcvbn'
-import {Sidebar} from '../../components/Sidebar/Sidebar'
-import '../../styles/global.css'
+import { Sidebar } from '../../components/Sidebar/Sidebar'
 
 const scoreLabels = [
   'Muito fraca',

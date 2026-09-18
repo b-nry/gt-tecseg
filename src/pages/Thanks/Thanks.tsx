@@ -1,6 +1,5 @@
 import { Sidebar } from "../../components/Sidebar/Sidebar"
 
-import "../../styles/global.css"
 
 export function Thanks () {
 

@@ -6,9 +6,7 @@ import { InputField } from "../../components/InputField/InputField";
 import { Alert } from "../../components/Alert/Alert";
 
 import logo from "../../assets/logo.png"
-import "../../styles/global.css"
 
-// TODO: Permitir que usuários façam login pelo nome de usuário também? Não sei como funcionaria...
 
 export function Login() {
 
@@ -88,6 +86,7 @@ export function Login() {
                     <InputField
                         label="Senha:"
                         id="password"
+                        type="password"
                         placeholder="Digite sua senha"
                         value={password}
                         onChange={setPassword}

@@ -12,7 +12,7 @@
 
     padding: 14px 11px;
 
-    background-color: #03153A;
+    background-color: var(--lhsa-background);
 
     color: #ffffff;
 
@@ -48,7 +48,7 @@
 .sidebar-logo h1 {
     margin: 0;
 
-    color: #C7AB43;
+    color: var(--lhsa-gold);
 
     font-family: Georgia, "Times New Roman", serif;
     font-size: 28px;
@@ -119,12 +119,12 @@
 
 
 .sidebar-button:hover {
-    background-color: rgba(199, 171, 67, 0.75);
+    background-color: var(--lhsa-gold);
 }
 
 
 .sidebar-button.active {
-    background-color: #C7AB43;
+    background-color: var(--lhsa-gold);
     color: #ffffff;
 }
 
@@ -222,7 +222,7 @@
 
 
 .logout-button:hover {
-    color: #C7AB43;
+    color: var(--lhsa-gold);
 }
 
 

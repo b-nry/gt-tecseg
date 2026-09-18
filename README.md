@@ -56,3 +56,8 @@ Modifiquei o CSS em tudo e adicionei ao global (exceto em componentes). A Sideba
 - Mais para frente é preciso explorar melhor o visual e as opções da biblioteca. São várias. Seria bom confirmar que o que ela diz é mesmo verdade e decidir o que é exatamente uma senha "muito forte".
 
 b-nry
+
+# 18/09
+- troquei o tom do amarelo conforme a Bianca sugeriu
+- tirei a importação do global para o app, agora só importar uma vez lá :), e botei nome das variáveis no css dos componentes 
+- senha tá oculta agora
