@@ -44,3 +44,15 @@ Modifiquei o CSS em tudo e adicionei ao global (exceto em componentes). A Sideba
 - falta só o negócio de analisar a senha, de resto só uns ajustes de organização do código...
 
 ('-')/ adiós pedro-hfw
+
+# 17/09 -> 18/09
+- Utilizei a biblioteca zxcvbn-ts (aquela recomendada porém na versão mais moderninha e com typescript).
+- **npm install @zxcvbn-ts/core @zxcvbn-ts/language-common @zxcvbn-ts/language-pt-br**
+- (Considerar outras linguagens comuns como inglês depois para dicionário e afins).
+- Ela é configurada em src/lib/zxcvbn.ts porque exige muito texto na importação.
+- Foi criada a página PasswordStrength para demonstração. Não há navegação direta então vá em ENDEREÇOLOCAL/passwordstrength para ver a página.
+- A biblioteca faz muito do trabalho braçal com o RESULT mágico dela tradução em português br.
+- O card de senha pode virar componente dependendo de como usaremos.
+- Mais para frente é preciso explorar melhor o visual e as opções da biblioteca. São várias. Seria bom confirmar que o que ela diz é mesmo verdade e decidir o que é exatamente uma senha "muito forte".
+
+b-nry

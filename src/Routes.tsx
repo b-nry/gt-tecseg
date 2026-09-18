@@ -8,6 +8,7 @@ import { Home } from './pages/Home/Home'
 import { Questionary } from './pages/Questionary/Questionary';
 import { Context } from './pages/Context/Context';
 import { Thanks } from './pages/Thanks/Thanks';
+import { PasswordStrength } from './pages/PasswordStrength/PasswordStrength';
 
 export const AppRoutes = () => {
 
@@ -27,6 +28,8 @@ export const AppRoutes = () => {
             )}
             {!isAuthenthicated && (
                 <Routes>
+                    <Route path='/passwordstrength' element={<PasswordStrength />} />
+
                     <Route path='/login' element={<Login />} />
                     <Route path='/cadastro' element={<Register />} />
                     <Route path='*' element={<Navigate to='/login' />} />
