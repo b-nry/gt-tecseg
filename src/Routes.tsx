@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { useIsAuthenthicated } from './shared/contexts/AuthContext';
 
 import { Login } from './pages/Login/Login';
-import { Register } from './pages/Login/Register'
+import { Register } from './pages/Register/Register'
 import { Home } from './pages/Home/Home'
 import { Questionary } from './pages/Questionary/Questionary';
 import { Context } from './pages/Context/Context';

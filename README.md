@@ -63,3 +63,9 @@ b-nry
 - senha tá oculta agora
 
 ('-')/ adiós pedro-hfw
+
+# 24/09
+- Register fica em um diretório separado do login agora.
+- Cores com uma variável associada apontam para a variável direto ao invés de repetirem o código de cor, removi --lhsa-background que era igual ao --lhsa-blue, Agrupei as cores com mais de duas referências em variável. Há muitas cores praticamente iguais que podemos alterar depois. Variáveis podem ser usadas de forma mais consistente nos componentes.
+
+b-nry
