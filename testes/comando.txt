@@ -1,0 +1,2 @@
+cd C:\hashcat\hashcat-7.1.2
+.\hashcat.exe -m 34000 -a 0 "C:\Users\Marília\Desktop\UFF\projeto-fastapi\hashes.txt" "C:\Users\Marília\Desktop\UFF\projeto-fastapi\senhas.txt"
